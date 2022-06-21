@@ -36,4 +36,29 @@ body{
 .header_a h1 a{
     color: var(--accent-color);
     margin-left: 15px;
-} 
+}
+
+.custom-card-header{
+    background-color: var(--accent-color);
+    padding: 0 20px;
+}
+
+.custom-card-body{
+    padding: 20px 20px 0px 20px;
+    color: var(--accent-color)
+}
+.custom-card-header h2 a{
+    color: var(--secondary-color);
+    font-size: 20px;
+    text-decoration: none;
+}
+
+.custom-card-header h2 a:hover{
+    color: #c7c7c7;
+}
+
+.custom-card-header span{
+    color: var(--secondary-color);
+    font-size: 10px;
+    padding-top: 20px;
+}
