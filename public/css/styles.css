@@ -1,5 +1,7 @@
 :root{
-    --main-color:#DBEAD2
+    --main-color:#DBEAD2;
+    --accent-color: black;
+    --secondary-color: #A7A7A7;
 }
 
 
@@ -7,12 +9,31 @@ body{
     background-color: var(--main-color);
 }
 
-.header_a{background-color:#000; min-height: 100PX; padding: 25px 0 25px 45px;}
+.header_a{
+    background-color: var(--accent-color);
+    min-height: 100px;
+    padding: 25px 0 25px 45px;
+}
 
-.header_a nav{ margin-bottom: 20px;}
+.header_a nav{
+    margin-bottom: 20px;
+}
 
-.header_a nav a{color: var(--main-color); font-size: 20px; margin-right: 50px;}
+.header_a nav a{
+    color: var(--main-color);
+    font-size: 20px;
+    margin-right: 50px;
+}
 
-.header_a h1{background-color: var(--main-color); padding: 5px; max-width: 270px; border-radius: 7px; box-shadow: 5px 5px #A7A7A7; }
+.header_a h1{
+    background-color: var(--main-color);
+    padding: 5px;
+    max-width: 270px;
+    border-radius: 7px;
+    box-shadow: 5px 5px var(--secondary-color);
+}
 
-.header_a h1 a{color: #000; margin-left: 15px;} 
+.header_a h1 a{
+    color: var(--accent-color);
+    margin-left: 15px;
+} 
