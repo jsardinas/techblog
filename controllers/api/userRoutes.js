@@ -3,7 +3,6 @@ const { User } = require('../../models');
 
 router.post('/', async (req, res) => {
     try {
-        console.log('signup request');
         const userData = await User.create(req.body);
         console.log(userData)
         req.session.save(() => {
@@ -27,13 +26,7 @@ router.post('/login', async (req, res) => {
                 .json('Incorrect email or password, please try again');
             return;
         }
-
-        console.log('pass:',req.body.password);
-
         const validPassword = await userData.checkPassword(req.body.password);
-
-        console.log('validPassword:', validPassword);
-
         if (!validPassword) {
             res
                 .status(400)
