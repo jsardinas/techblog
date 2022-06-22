@@ -1,7 +1,7 @@
 
 {{#each posts as |post| }}
     <div class="row">
-        <div class="card">
+        <div class="card custom-card">
             <div class="custom-card-header display-flex justify-space-between">
                 <h2>
                     <a href="/post/{{post.id}}">{{post.title}}</a>
@@ -10,7 +10,7 @@
             </div>
             <div class="custom-card-body">
                 <p>
-                    {{post.body}}
+                    {{post.content}}
                 </p>
             </div>
         </div>  

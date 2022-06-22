@@ -94,9 +94,28 @@ a{
     min-height: 100px;
     width: 100%;
     border-color: var(--border-color);
+    resize:vertical;
+}
+
+.fixed-form-control{
     resize: none;
 }
 
 .custom-form-control:focus{
     border-width: 5px;
+}
+
+.new-post{
+    background-color: var(--accent-color);
+    color: white;
+    font-size: 30px;
+    border-radius: 8px;
+    padding: 15px 30px;
+    margin-top: 10px;
+}
+
+.new-post:hover{
+    text-decoration: none;
+    color: white;
+    cursor: pointer;
 }

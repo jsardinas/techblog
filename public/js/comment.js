@@ -4,7 +4,6 @@ const commentFormHandler = async (event) => {
     // Collect values from the form
     const comment = document.querySelector('#comment').value.trim();
     const id = document.querySelector('#post').getAttribute('postid');
-    console.log(id);
 
     if (comment) {
         // Send a POST request to the API endpoint

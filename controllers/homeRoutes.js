@@ -51,7 +51,6 @@ router.get('/post/:id', async (req, res) => {
 // Use withAuth middleware to prevent access to route
 router.get('/dashboard', withAuth, async (req, res) => {
   try {
-    // Find the logged in user based on the session ID
     const postData = await Post.findAll( {
       where: {user_id: req.session.user_id}
     });
@@ -80,5 +79,26 @@ router.get('/signup', (req, res) => {
   res.render('signup');
 });
 
+router.get('/new', withAuth, async (req, res) => {
+  try {
+    res.render('new');
+  } catch (err) {
+    res.status(500).json(err);
+  }
+});
+
+router.get('/update/:id', withAuth, async (req, res) => {
+  try {
+    const postData = await Post.findByPk(req.params.id);
+
+    const post = postData.get({ plain: true });
+    console.log(post);
+    res.render('update', {
+      post
+    });
+  } catch (err) {
+    res.status(500).json(err);
+  }
+});
 
 module.exports = router;

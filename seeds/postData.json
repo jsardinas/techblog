@@ -1,17 +1,17 @@
 [
     {
-      "title": "Why MVC is so important",
-      "body": "MVC  is a pattern in software design commonly used to implement user interfaces, data, and controlling logic. It emphasizes a separation between the software's business logic and display.",
-      "user_id": 1
+        "title": "Why MVC is so important",
+        "content": "MVC  is a pattern in software design commonly used to implement user interfaces, data, and controlling logic. It emphasizes a separation between the software's business logic and display.",
+        "user_id": 1
     },
     {
         "title": "Authentication vs Authorization",
-        "body": "Simply put, authentication is the process of verifying who someone is, whereas authorization is the process of verifying what specific applications, files, and data a user has access to.",
+        "content": "Simply put, authentication is the process of verifying who someone is, whereas authorization is the process of verifying what specific applications, files, and data a user has access to.",
         "user_id": 2
     },
     {
         "title": "ORM",
-        "body": "Object–relational mapping in computer science is a programming technique for converting data between type systems using object-oriented programming languages. This creates, in effect, a 'virtual object database' that can be used from within the programming language.",
+        "content": "Object–relational mapping in computer science is a programming technique for converting data between type systems using object-oriented programming languages. This creates, in effect, a 'virtual object database' that can be used from within the programming language.",
         "user_id": 3
     }
 ]
