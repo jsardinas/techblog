@@ -4,6 +4,7 @@
     --secondary-color: #A7A7A7;
     --btn-color: #666;
     --btn-highlight: #777;
+    --border-color: #7CACE2;
 }
 
 body{
@@ -41,6 +42,7 @@ body{
 
 .custom-card{
     width: 100%;
+    border: 4px solid var(--accent-color);
 }
 
 .custom-card-header{
@@ -62,6 +64,7 @@ a{
     color: var(--main-color);
     font-size: 20px;
     text-decoration: none;
+    min-height: 40px;
 }
 
 .custom-card-header h2 a:hover{
@@ -85,4 +88,15 @@ a{
 
 .custom-btn-primary:hover{
     background-color: var(--btn-highlight);
+}
+
+.custom-form-control{
+    min-height: 100px;
+    width: 100%;
+    border-color: var(--border-color);
+    resize: none;
+}
+
+.custom-form-control:focus{
+    border-width: 5px;
 }
