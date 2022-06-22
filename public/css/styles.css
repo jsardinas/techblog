@@ -2,6 +2,8 @@
     --main-color:#DBEAD2;
     --accent-color: black;
     --secondary-color: #A7A7A7;
+    --btn-color: #666;
+    --btn-highlight: #777;
 }
 
 body{
@@ -37,6 +39,10 @@ body{
     margin-left: 15px;
 }
 
+.custom-card{
+    width: 100%;
+}
+
 .custom-card-header{
     background-color: var(--accent-color);
     padding: 0 20px;
@@ -53,7 +59,7 @@ a{
 }
 
 .custom-card-header h2{
-    color: var(--secondary-color);
+    color: var(--main-color);
     font-size: 20px;
     text-decoration: none;
 }
@@ -65,4 +71,18 @@ a{
 .custom-card-header span{
     color: var(--secondary-color);
     font-size: 10px;
+}
+
+.signup-link{
+    margin: 10px 0px 20px 0px;
+}
+
+.custom-btn-primary{
+    background-color: var(--btn-color);
+    color: lightgray;
+    width: 100%;
+}
+
+.custom-btn-primary:hover{
+    background-color: var(--btn-highlight);
 }
