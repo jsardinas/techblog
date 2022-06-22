@@ -1,5 +1,6 @@
 const router = require('express').Router();
 const { Post } = require('../../models');
+const withAuth = require('../../utils/auth');
 
 router.post('/', async (req, res) => {
     try {
@@ -17,7 +18,7 @@ router.post('/', async (req, res) => {
     }
 });
 
-router.put('/:id', async (req, res) => {
+router.put('/:id', withAuth, async (req, res) => {
     try {
         const updated = await Post.update(req.body,{
             where: {id: req.params.id}
@@ -28,6 +29,27 @@ router.put('/:id', async (req, res) => {
     } catch (err) {
         console.log(err);
         res.status(400).json(err);
+    }
+});
+
+router.delete('/:id', withAuth, async (req, res) => {
+    try {
+        const deleted = await Post.destroy({
+            where: {
+                id: req.params.id,
+                user_id: req.session.user_id,
+            },
+        });
+
+        if (!deleted || deleted.length === 0 || deleted[0] === 0) {
+            res.status(404).json({ message: 'No project found with this id!' });
+            return;
+        }
+
+        res.status(200).json('record deleted');
+    } catch (err) {
+        console.log(err);
+        res.status(500).json(err);
     }
 });
 
