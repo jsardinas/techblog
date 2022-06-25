@@ -4,7 +4,7 @@ const { Comment, Post } = require('../../models');
 router.post('/', async (req, res) => {
     try {
         const body = {
-            'body':req.body.comment,
+            'content':req.body.comment,
             'user_id':req.session.user_id,
             'post_id':req.body.id
         };
