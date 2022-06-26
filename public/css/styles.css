@@ -45,15 +45,29 @@ body{
     border: 3px solid var(--accent-color);
 }
 
+.title-only-card{
+    width: 100%;
+    color:#E6E9FC;
+}
+
 .custom-card-header{
     background-color: var(--accent-color);
     padding: 0 20px;
     align-items: center;
 }
 
+.title-only-card-header{
+    background-color: #666;
+    padding: 5px 20px;
+    border-radius: 8px;
+    align-items: center;
+    min-height: 50px;
+    font-size: 20px;
+}
+
 .custom-card-body{
     padding: 20px 20px 0px 20px;
-    color: var(--accent-color)
+    color: var(--accent-color);
 }
 
 a{
@@ -68,6 +82,10 @@ a{
 }
 
 .custom-card-header h2 a:hover{
+    color: #EAFAF1;
+}
+
+.title-only-card-header span a:hover{
     color: #EAFAF1;
 }
 
@@ -110,7 +128,7 @@ a{
     color: white;
     font-size: 30px;
     border-radius: 8px;
-    padding: 15px 30px;
+    padding: 12px 32px;
     margin-top: 10px;
 }
 
