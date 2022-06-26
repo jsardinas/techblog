@@ -95,7 +95,9 @@ router.get('/signup', (req, res) => {
 
 router.get('/new', withAuth, async (req, res) => {
     try {
-        res.render('new');
+        res.render('new',{
+            logged_in: true
+        });
     } catch (err) {
         res.status(500).json(err);
     }
@@ -108,7 +110,8 @@ router.get('/update/:id', withAuth, async (req, res) => {
         const post = postData.get({ plain: true });
         console.log(post);
         res.render('update', {
-            post
+            post,
+            logged_in: true
         });
     } catch (err) {
         res.status(500).json(err);
