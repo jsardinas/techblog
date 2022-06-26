@@ -48,6 +48,7 @@ body{
 .title-only-card{
     width: 100%;
     color:#E6E9FC;
+    margin-bottom: 10px;;
 }
 
 .custom-card-header{
