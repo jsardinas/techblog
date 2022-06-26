@@ -14,7 +14,7 @@ const commentFormHandler = async (event) => {
         });
 
         if (response.ok) {
-            //document.location.replace('/');
+            document.location.reload();
         } else {
             console.log(response);
             alert(response.statusText);
